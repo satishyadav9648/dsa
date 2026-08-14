@@ -10,6 +10,10 @@ class Teacher{
     string dept;
     string subject;
 
+    Teacher(){
+      cout<<"Hii, i am a constructor."<<endl;
+    }
+
 };
 
 int main()
@@ -17,7 +21,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    Teacher t1;  // defaul constructor call
+    Teacher t1;  // constructor call
+    Teacher t2;  //
     t1.name = "satish";
     // t1.salary = 25000;
 
