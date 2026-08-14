@@ -1,0 +1,23 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void print(int n){
+  if(n == 0) return;
+
+  print(n-1);
+  cout<<n<<'\n';
+}
+
+int main()
+{
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
+    int n;
+    cin>>n;
+
+    print(n);
+    cout<<'\n';
+
+  return 0;
+}
