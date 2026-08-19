@@ -11,11 +11,22 @@ class Teacher{
     string subject;
 
     //parameterised constructor
-    Teacher(string n, string d){
-      name = n;
-      dept = d;
+    Teacher(string name, string dept){
+      this->name = name;
+      this->dept = dept;
     }
 
+    //copy constructor
+    Teacher(Teacher &orgObj){
+      cout<<"I am custom copy constructor..\n";
+      this->name = orgObj.name;
+      this->dept = orgObj.dept;
+    }
+
+    void getinfo(){
+      cout<<name<<endl;
+      cout<<dept<<endl;
+    }
 };
 
 int main()
@@ -24,11 +35,12 @@ int main()
     cin.tie(NULL);
 
     Teacher t1("shubham", "information technology");  // constructor call
-    Teacher t2("hii", "by");  // again constructor call
-    // t1.salary = 25000;
+    Teacher t2(t1);  // 
 
     cout<<t1.name<<endl; 
     cout<<t1.dept<<endl;
+
+    t2.getinfo();
 
   return 0;
 }

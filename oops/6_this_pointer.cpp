@@ -10,9 +10,10 @@ class Teacher{
     string dept;
     string subject;
 
-    //non-parameterised constructor
-    Teacher(){
-      cout<<"Hii, i am a constructor."<<endl;
+    //parameterised constructor
+    Teacher(string name, string dept){
+      this->name = name;
+      this->dept = dept;
     }
 
 };
@@ -22,10 +23,8 @@ int main()
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    Teacher t1;  // constructor call
-    Teacher t2;  // again construc call
-    t1.name = "satish";
-    // t1.salary = 25000;
+    Teacher t1("shubham", "information technology");  // constructor call
+    Teacher t2("hii", "by");  // again constructor call
 
     cout<<t1.name<<endl; 
     cout<<t1.dept<<endl;
